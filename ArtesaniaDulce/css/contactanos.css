@@ -1,0 +1,247 @@
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    color: #333;
+}
+
+header {
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 20px; 
+}
+
+
+.container {
+    position: relative;
+    margin-top: -70px;  
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+
+.formulario-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+
+.informacion-contacto {
+    width: 55%;
+    padding: 20px;
+    justify-content: center;
+   align-content: center;
+    text-align: center;
+}
+
+.informacion-contacto h3 {
+    color: #000;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.informacion-contacto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.informacion-contacto i {
+    color: red;
+    margin-right: 10px;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    color:red;
+    font-size: 24px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    color: #34c6a7;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    width: 45%;
+    padding: 20px;
+}
+
+.input-formulario {
+    margin-bottom: 20px;
+}
+
+.input-formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-formulario input,
+.input-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-formulario input:focus,
+.input-formulario textarea:focus {
+    border-color: #34c6a7;
+    outline: none;
+}
+
+.input-formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-formulario {
+    text-align: center;
+}
+
+.btn-verde {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-verde:hover {
+    background-color: #2ea688;
+    transform: translateY(-5px);
+}
+
+
+#acceptButton {
+    background-color: #34c6a7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#acceptButton:hover {
+    background-color: #2ea688;
+}
+
+
+#errorMessage {
+    color: #e74c3c;
+    font-size: 16px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+}
+
+.contenedorimgconta{
+    padding: 82px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        position: relative;
+        padding: 20px 12px 0 12px; 
+        margin-top: 0; 
+    }
+
+    .formulario-contacto {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .informacion-contacto,
+    .formulario {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .informacion-contacto {
+        padding: 10px;
+    }
+
+    .informacion-contacto h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .informacion-contacto p {
+        margin-bottom: 6px;
+    }
+
+    .informacion-contacto i {
+        font-size: 16px;
+    }
+
+    .input-formulario label {
+        text-align: left;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .redes-sociales {
+        margin-top: 10px;
+    }
+
+    .redes-sociales a {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .contenedorimgconta {
+        padding: 20px; 
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .informacion-contacto h3 {
+        font-size: 20px;
+    }
+
+    .informacion-contacto p {
+        font-size: 14px;
+    }
+
+    .btn-verde,
+    #acceptButton {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .contenedorimgconta {
+        padding: 10px; 
+    }
+}

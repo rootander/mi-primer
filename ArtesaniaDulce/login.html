@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/LOGOTIPO.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Login-Registrar</title>
+</head>
+
+
+<body>
+  <button class="back-button" onclick="window.location.href='index.html'"><i class='bx bx-arrow-back' style='color:#ffffff'  ></i>Volver</button>
+
+    <div class="container" id="container">
+      <div class="container-switch">
+        <label class="switch">
+          <input type="checkbox" id="toggleSwitch">
+          <span class="slider"></span>
+        </label>
+        <span id="textSwitch">Registrarse</span>
+      </div>
+    
+      
+
+   
+      <div class="form-container sign-up">
+        <form method="post">
+      
+    
+            <h1>Registrarse</h1>
+    
+            <input type="text" id="dni" name="dni" maxlength="8" required placeholder="Dni">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" id="direccion" name="direccion" required placeholder="Dirección">
+            <input type="tel" id="celular" name="celular" maxlength="9" required placeholder="Celular">
+
+
+            <div class="password-container">
+              <input type="password" id="register-password" placeholder="Contraseña" minlength="6" required>
+              <i class="fa-solid fa-eye toggle-password" onclick="togglePassword(this)"></i>
+            </div>
+            
+
+          
+            <div class="checkbox-container">
+                <input type="checkbox" id="privacidad" required>
+                <label for="privacidad">Acepto la <a href="#">política de privacidad</a> y los <a href="#">términos y condiciones</a></label>
+            </div>
+    
+            <button data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
+        </form>
+    </div>
+    
+        <div class="form-container sign-in">
+            <form method="post">
+                <h1>Iniciar Sesion</h1>
+                <div class="social-icons">
+                    <a href="https://accounts.google.com/" target="_blank" class="icon"><img src="img/gogle" alt="Google Favicon">
+                    </i></a>
+                    <a href="https://www.facebook.com/" target="_blank" class="icon">  <img src="img/fb_log" alt="Facebook Logo" width="28" height="28">
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" class="icon"> <i class="bi bi-tiktok fs-3" ></i>
+                    </a>
+                    <a href="https://www.Outlook.com/" target="_blank" class="icon"><img src="img/Outlook.png" alt="Google Favicon"></a>
+                </div>
+                <span>o usa tu contraseña de correo electrónico</span>
+                <input type="email" placeholder="Email">
+              
+                <div class="password-container">
+                  <input type="password" id="login-password" placeholder="Contraseña" required>
+                  <i class="fa-solid fa-eye toggle-password" onclick="togglePassword(this)"></i>
+                </div>
+                
+                <a href="#">¿Olvidó su contraseña?</a>
+                <button   type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar sesion</button>
+            </form>
+        </div>
+        <script src="js/contra.js"></script>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>Introduzca sus datos personales para utilizar todas las funciones del sitio.</p>
+                    <button type="button" class="hidden" id="login">Iniciar sesion</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hola, MetaFriend!</h1>
+                    <p>Regístrese con sus datos personales para utilizar todas las funciones del sitio.</p>
+                    <button type="button" class="hidden" id="register" >Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+<div class="modal fade" id="modalRegistro" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 shadow-lg border-0 animate__animated animate__fadeInDown">
+        <div class="modal-header border-0 position-relative pb-0">
+          <h5 class="modal-title w-100 text-center fw-semibold text-success" id="modalRegistroLabel">
+            <i class="bi bi-check-circle-fill me-2"></i>¡Registro Exitoso!
+          </h5>
+          <button type="button" class="btn-close position-absolute end-0 top-0 me-2 mt-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="fs-5 text-secondary mb-0">Se ha registrado correctamente.</p>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          
+          <button id="btnAceptarRegistro" type="button" class="btn btn-success px-4 rounded-pill shadow-sm" data-bs-dismiss="modal">
+            <i class="bi bi-check-lg me-1"></i>Aceptar
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalLogin" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 shadow-lg border-0 animate__animated animate__fadeInDown">
+        <div class="modal-header border-0 position-relative pb-0">
+          <h5 class="modal-title w-100 text-center fw-semibold text-primary" id="modalLoginLabel">
+            <i class="bi bi-box-arrow-in-right me-2"></i>¡Inicio de Sesión Exitoso!
+          </h5>
+          <button type="button" class="btn-close position-absolute end-0 top-0 me-2 mt-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="fs-5 text-secondary mb-0">Has iniciado sesión correctamente.</p>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <button id="btnAceptarLogin" type="button" class="btn btn-primary px-4 rounded-pill shadow-sm" data-bs-dismiss="modal">
+            <i class="bi bi-check2 me-1"></i>Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+ <script src="js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+
+.contactanos, .historia, .tortas, .inciarsesion {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+    max-width: 250px;
+    margin: auto;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-img-top {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card-body span {
+    font-size: 1.1rem;
+    color: #c0392b;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #c2185b;
+    margin-bottom: 20px;
+  }
+
+  .contenedor-principal h2{
+    color: white;
+  }
+  
+  nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 180px;
+    }
+  }
+  
+
+

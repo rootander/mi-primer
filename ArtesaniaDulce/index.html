@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>𝒜𝓇𝓉𝑒𝓈𝒶𝓃𝒾𝒶 𝒟𝓊𝓁𝒸𝑒</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/LOGOTIPO.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/catering.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Sacramento&family=Alex+Brush&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+   
+    <body>
+        <header class="fixed-header">
+            <nav class="navbar navbar-expand-sm bg-propio " data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light fancy-parisienne" href="index.html">
+                        <img class="rounded-circle" src="img/LOGOTIPO.png" width="40" alt="alt"/>
+                        Artesania Dulce
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">                        
+                        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                            <li class="nav-item">
+                                <a class="nav-link  text-light active contactanos" aria-current="page" href="contactanos.html">Contactanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active historia" href="historia.html">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active tortas" href="tortas.html">Carta Digital</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active tortas" href="reservar.html">Reservar</a>
+                            </li>
+                        </ul>
+                        <a href="login.html" class="btn text-propio btn-propio bg-light inciarsesion">
+                            <i class="bi bi-person-circle"></i>
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container my-4">
+            <div id="miVideo" class="position-relative text-center text-white">
+                <video muted autoplay loop class="w-100" src="video/videopasta.mp4" style="object-fit: cover; height: 700px;"></video>
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <h2 class="fw-bold mb-3">Descubre la magia de nuestros sabores</h2>
+                  <p class="mb-4">Haz tu pedido hoy mismo y endulza tu ocasión especial</p>
+                  <a href="reservar.html" class="btn btn-lg fw-bold shadow btn-personal text-light">Reservar Ahora</a>
+                </div>
+              </div>
+           <div class="container d-flex align-items-center justify-content-center min-vh-70">
+            <div class="col-12 col-md-6 p-5 bg-nuevo text-center text-light">
+                <h2 class="display-4  font-weight-bold text-light" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    ¡ Bienvenido a nuestra pastelería artesena !
+                </h2>
+                <p class="lead mt-3 descripcion-bienvenida" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Artesanía Dulce es un rincón de sabor donde cada torta se convierte en una obra de arte. Nos especializamos en una amplia variedad de tortas, desde las más clásicas hasta creaciones innovadoras, siempre elaboradas con ingredientes de alta calidad. Sabores exquisitos, texturas suaves y decoraciones únicas hacen de cada bocado una experiencia inolvidable. En Artesanía Dulce, endulzamos tus momentos más especiales con pasión y creatividad.
+                </p>
+            </div>
+        </div>
+        
+        
+
+        <section class="py-5 bg-propio mt-5" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+            <div class="container">
+          
+            
+              <div class="row text-center mb-4 text-light">
+                <div class="col">
+                  <h2 class="section-title fw-bolder">Sobre Nosotros</h2>
+                  <p class="text-light">Conoce un poco más de nuestra esencia y cómo nació Artesanía Dulce</p>
+                </div>
+              </div>
+          
+             
+              <div class="row-horizontal">
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bolder">Descripción</h3>
+                    <p class="card-text">
+                        Artesanía Dulce es una pastelería dedicada a la elaboración artesanal de tortas con una gran variedad de sabores irresistibles. Nos destacamos por la calidad de nuestros ingredientes, la creatividad en cada diseño y el compromiso de endulzar tus momentos más especiales con productos frescos, delicados y llenos de sabor.
+                    </p>
+                    <button class="leerMas" data-contenido="detalle1">Leer Más</button>
+                    <div id="detalle1" class="detalle">
+                      <p>Expansión de contenido dentro del mismo contenedor.</p>
+                      <button class="leerMenos" data-contenido="detalle1">Leer Menos</button>
+                    </div>
+                  </div>
+                </div>
+          
+               
+                <div class="card h-100 shadow-sm border-0">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bolder">Historia</h3>
+                    <p class="card-text">
+                        Artesanía Dulce nació como un pequeño emprendimiento familiar, inspirado en la pasión por la repostería casera. Con el tiempo y el apoyo de nuestros clientes, fuimos creciendo hasta convertirnos en una pastelería reconocida por nuestras tortas artesanales, elaboradas con amor, tradición y un toque único en cada creación.
+                    </p>
+                    <button class="leerMas" data-contenido="detalle2">Leer Más</button>
+                    <div id="detalle2" class="detalle">
+                      <p>Valoramos la calidad, la tradición y el cariño que ponemos en cada receta.</p>
+                      <button class="leerMenos" data-contenido="detalle2">Leer Menos</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </section>
+
+     
+          
+          
+
+                <section class="catering">
+                    <h1>Pasteles</h1>
+                    <p>En Artesanía Dulce, cada torta es una combinación perfecta de sabor, textura y presentación. Ofrecemos una amplia variedad de opciones: desde clásicos como chocolate, vainilla y frutos rojos, hasta combinaciones especiales con dulce de leche, cremas, frutas frescas y rellenos personalizados</p>
+                    <p>Nos enfocamos en lograr tortas no solo deliciosas, sino también visualmente únicas, ideales para todo tipo de celebraciones. Cada creación es hecha a mano, con ingredientes frescos y mucho amor.</p>
+                    <div class="servicios">
+                        <div class="servicio">
+                            <div class="contenido">
+                                <img src="img/pex1.jpg" alt="Catering para Bodas">
+                            </div>
+                        </div>
+                        <div class="servicio">
+                            <div class="contenido">
+                                <img src="img/pex2.jpg" alt="Catering Corporativo">
+                            </div>
+                        </div>
+                        <div class="servicio">
+                            <div class="contenido">
+                                <img src="img/pex3.jpg" alt="Catering Corporativo">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="container my-5">
+                <div class="row text-center mb-4">
+                    <div class="col">
+                        <h2 class="section-title text-propio fw-bolder">Catálogo de Tortas</h2>
+                        <p class="text-muted  fw-bold">Descubre nuestras deliciosas tortas artesanales</p>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle">
+                        <thead class="table-dark text-white">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Sabor</th>
+                                <th>Tamaño</th>
+                                <th>Personalizado</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Torta de Chocolate</td>
+                                <td>Chocolate</td>
+                                <td>Mediana</td>
+                                <td><span class="badge bg-success">Sí</span></td>
+                                <td><span class="fw-bold">S/.20</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tres Leches</td>
+                                <td>Vainilla y Leche</td>
+                                <td>Grande</td>
+                                <td><span class="badge bg-success">Sí</span></td>
+                                <td><span class="fw-bold">S/.30</span></td>
+                            </tr>
+                            <tr>
+                                <td>Torta de Maracuya</td>
+                                <td>Maracuya</td>
+                                <td>Chica</td>
+                                <td><span class="badge bg-success">Sí</span></td>
+                                <td><span class="fw-bold">S/.40</span></td>
+                            </tr>
+                            <tr>
+                                <td>Torta Helada</td>
+                                <td>Gelatina</td>
+                                <td>Mediana</td>
+                                <td><span class="badge bg-danger">No</span></td>
+                                <td><span class="fw-bold">S/.50</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container py-5">
+                <div id="carouselPets" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPets" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselPets" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselPets" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselPets" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                  
+                 
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/pastel1.jpg" class="d-block w-100" alt="..." style="max-height: 500px; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/pastel2.jpg" class="d-block w-100" alt="..." style="max-height: 500px; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/pexels-marinautrabo-1729808 (1).jpg" class="d-block w-100" alt="..." style="max-height: 500px; object-fit: cover; border-radius: 15px;">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/pastt.jpg" class="d-block w-100" alt="..." style="max-height: 500px; object-fit: cover; border-radius: 15px;">
+                    </div>
+                  </div>
+                  
+              
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPets" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselPets" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+                                    
+        </main>
+        <div class="container my-5">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="section-title text-propio fw-bolder">
+        Nuestros Servicios</h2>
+
+        <div class="servicios">
+            </div>
+     <div class="grid-container">
+        <div class="grid-item servicio">
+            <div class="overlay">
+                <img src="img/gri1.jpg" alt="Tortas">
+                <div class="text">
+                    <h2>Tortas</h2>
+                    <a href="#" class="btn btn-rojo">Leer Más</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item servicio">
+            <div class="overlay">
+                <img src="img/chef01.jpg" alt="Eventos especiales">
+                <div class="text">
+                    <h2>Eventos especiales</h2>
+                    <a href="#" class="btn btn-rojo">Leer Más</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item servicio">
+            <div class="overlay">
+                <img src="img/gri3.jpg" alt="Cafeteria">
+                <div class="text">
+                    <h2>Cafeteria</h2>
+                    <a href="#" class="btn btn-rojo">Leer Más</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item servicio">
+            <div class="overlay">
+                <img src="img/grid4.jpg" alt="Promociones">
+                <div class="text">
+                    <h2>Promociones</h2>
+                    <a href="#" class="btn btn-rojo">Leer Más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+</div>
+
+<div class="filatorta-servicios">
+    <h1>Cakes</h1>
+</div>
+
+<div class="filatorta-grid-container">
+    <div class="filatorta-grid-item">
+        <div class="filatorta-overlay">
+            <img src="img/utl1.jpg" alt="Keke de chocolate">
+            <div class="filatorta-text">
+                <h2>Keke de chocolate</h2>
+                <a href="#" class=" btnult">Leer Más</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="filatorta-grid-item">
+        <div class="filatorta-overlay">
+            <img src="img/ult2.jpg" alt="Tajada de Pai de Chia">
+            <div class="filatorta-text">
+                <h2>Tajada de Pai de Chia</h2>
+                <a href="#" class="btnult">Leer Más</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="filatorta-grid-item">
+        <div class="filatorta-overlay">
+            <img src="img/ult3.jpg" alt="Cake de naranja">
+            <div class="filatorta-text">
+                <h2> Cake de naranja</h2>
+                <a href="#" class="btnult">Leer Más</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="filatorta-grid-item">
+        <div class="filatorta-overlay">
+            <img src="img/ult4.jpg" alt="Pastel para Bodas">
+            <div class="filatorta-text">
+                <h2>Pastel para Bodas</h2>
+                <a href="#" class="btnult">Leer Más</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div class="container py-5">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h1 class="display-4 fw-bold text-propio">Nuestras Ubicaciones</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.632217570514!2d-77.04431408202665!3d-12.02311927308583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8d090f6cb71%3A0x8d6b09532b6d6d77!2sAte%2C+Lima!5e0!3m2!1ses!2spe!4v1632188676976!5m2!1ses!2spe" width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+            <footer class="bg-propio text-white text-center py-4 mt-left ">
+            <div class="contenedor-principal">
+                <div class="contenedor1">
+                    <h2>Contáctanos</h2>
+                    <p>¿Tienes preguntas? ¡Nos encantaría saber de ti!</p> 
+                    <p>Escríbenos a nuestras redes o llámanos al (123) 456-7890.</p>
+                    <a href="https://wa.me/1234567890">
+                        <img src="img/whatsapp.png">
+                    </a>
+                    <a href="https://www.facebook.com">
+                        <img src="img/fb_log">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img src="img/instagram.jpg">
+                    </a>
+                </div>
+                <div class="contenedor2">
+                    <h2>Nosotros</h2>
+                    <p>Nuestras Tiendas</p>
+                    <p>Cobertura</p>
+                    <p>Nuestros Productos</p>
+                </div>
+                <div class="contenedor3">
+                    <h2>Servico al Cliente</h2>
+                    <p>Preguntas Frecuentes</p>
+                    <p>Polìticas de Cookies</p>
+                    <p>Legales Web</p>
+                </div>
+                <div class="contenedor4">
+                    <h2>Libro De Reclamaciones</h2>
+                    <a href="librodereclamaciones.html">
+                        <img src="img/libro.png">
+                    </a>
+                </div>
+
+            </div>
+            </footer>
+     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="js/QueryIndex.js"></script>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ 
+  padding-top: 70px; 
+
+}
+
+
+
+.contenedor-reservacion {
+    position: relative;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; 
+    margin-top: -10px;
+    max-width: 100%; 
+    overflow: hidden; 
+  
+}
+
+.informacion-reservacion {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;  
+}
+
+.informacion-reservacion:hover {
+    box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.2); 
+    background-color: #f9f9f9;  
+    transform: scale(1.01);  
+}
+
+
+.informacion-reservacion h3 {
+ 
+    font-size: 35px; 
+    margin-bottom: 8px; 
+    color: #d31313;
+}
+
+.informacion-reservacion p {
+    font-size: 16px;              
+    color: #0e0e0e;
+    line-height: 1.6;             
+    margin: 0 auto 15px auto;   
+    max-width: 90%;               
+    text-align: center;          
+}
+
+
+
+.formulario-reservacion {
+    flex: 2;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px 35px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 550px; 
+    height: auto; 
+    overflow-y: auto; 
+
+}
+
+
+.input-formulario label {
+    display: block;
+    margin-bottom: 4px; 
+    color: #333;
+    font-weight: bold;
+}
+
+.formulario-reservacion{
+    font-size: 20px; 
+}
+.input-formulario label {
+    display: block;
+
+    margin-bottom: 20px;  
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-formulario input,
+.input-formulario textarea {
+    margin-bottom: 15px;  
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* input */
+
+.input-formulario label {
+  font-size: 16px;      
+  display: block;           
+}
+
+
+.input-formulario input[readonly] {
+  background-color: #e0e0e0;
+  color: #474545;               
+  border: 1px solid #aaa;   
+}
+
+
+
+
+
+.input-formulario input {
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;        
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#fecha:focus,
+#hora:focus,
+#comentarios:focus {
+  border-color: #c5190c;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+#comentarios {
+  width: 100%;
+  min-height: 140px; 
+}
+
+
+#comentarios {
+  font-size: 20px;
+  padding: 10px;            
+  padding-left: 10px;      
+  text-align: left;         
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+#comentarios {
+  text-align: left;
+  padding-left: 10px;
+}
+/*  */
+.btn-formulario {
+    text-align: center;
+}
+
+.btn-rojo {
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 14px; 
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-rojo:hover {
+    background-color: #a10e26;
+    color: yellow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    transform: translateY(-5px); 
+
+}
+.input-formulario input[type="text"]:focus,
+.input-formulario input[type="email"]:focus,
+.input-formulario input[type="tel"]:focus {
+    outline: none;          
+    box-shadow: none;      
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .contenedor-reservacion {
+        flex-direction: column;
+        padding: 0 15px; 
+    }
+
+    .informacion-reservacion, .formulario-reservacion {
+        flex: 1;
+        margin-bottom: 15px; 
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .informacion-reservacion {
+        padding: 10px; 
+    }
+
+    .formulario-reservacion {
+        padding: 15px; 
+    }
+
+   
+    .input-formulario input, .input-formulario textarea {
+        width: 100%; 
+    }
+
+
+    .btn-rojo {
+        width: 100%; 
+        padding: 12px; 
+        font-size: 14px; 
+    }
+}
+
+

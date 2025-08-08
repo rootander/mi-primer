@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>𝒜𝓇𝓉𝑒𝓈𝒶𝓃𝒾𝒶 𝒟𝓊𝓁𝒸𝑒</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/LOGOTIPO.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+       
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Sacramento&family=Alex+Brush&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reservar.css">
+    </head>
+ 
+
+
+
+    <body>
+        <header class="fixed-header">
+            <nav class="navbar navbar-expand-sm bg-propio" >
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light fancy-parisienne " href="index.html">
+                        <img class="rounded-circle" src="img/LOGOTIPO.png" width="40" alt="alt"/>
+                        Artesanía Dulce
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">                        
+                        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                            <li class="nav-item">
+                                <a class="nav-link  text-light active contactanos" aria-current="page" href="contactanos.html">Contactanos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active historia" href="historia.html">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active tortas" href="tortas.html">Carta Digital</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light active tortas" href="reservar.html">Reservar</a>
+                            </li>
+                        </ul>
+                        <a href="login.html" class="btn text-propio btn-danger bg-light">
+                            <i class="bi bi-person-circle"></i>
+                            Iniciar sesión
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+       
+        <main class="container my-4">
+          
+      
+   
+            
+        
+            
+                <div class="contenedor-reservacion contenedor">
+                    <div class="informacion-reservacion">
+                        <h3>Reserva tus Tortas</h3>
+                        <p><i class="fas fa-calendar-alt"></i> Elige la fecha y hora que prefieras</p>
+                        <p><i class="fas fa-users"></i> Indica el número de Tortas</p>
+                        <p><i class="fas fa-comments"></i> Deja tus comentarios o solicitudes especiales</p>
+                    </div>
+            
+                    
+                 <form class="formulario-reservacion"  method="post">
+                <div class="input-formulario">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre"  readonly>
+                </div>
+                <div class="input-formulario">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo"  readonly>
+                </div>
+                <div class="input-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono"  readonly>
+                </div>
+                      <div class="input-formulario">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="input-formulario">
+                            <label for="hora">Hora</label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
+                       
+                        <div class="input-formulario">
+                            <label for="comentarios">Comentarios</label>
+                            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+                          </div>
+                        <div class="btn-formulario">
+                            <button type="button" class="btn btn-rojo" data-bs-toggle="modal" data-bs-target="#modalCarac">
+                                Reservar
+                            </button>
+                            
+                        </div>
+                    </form>
+            
+                </div>
+            
+              
+         </main>
+          
+            <footer class="bg-propio text-white text-center py-4 mt-left ">
+                <div class="contenedor-principal">
+                    <div class="contenedor1">
+                        <h2>Contáctanos</h2>
+                        <p>¿Tienes preguntas? ¡Nos encantaría saber de ti!</p> 
+                        <p>Escríbenos a nuestras redes o llámanos al (123) 456-7890.</p>
+                        <a href="https://wa.me/1234567890">
+                            <img src="img/whatsapp.png">
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <img src="img/facebook.png">
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <img src="img/instagram.jpg">
+                        </a>
+                    </div>
+                    <div class="contenedor2">
+                        <h2>Nosotros</h2>
+                        <p>Nuestras Tiendas</p>
+                        <p>Cobertura</p>
+                        <p>Nuestros Productos</p>
+                    </div>
+                    <div class="contenedor3">
+                        <h2>Servico al Cliente</h2>
+                        <p>Preguntas Frecuentes</p>
+                        <p>Polìticas de Cookies</p>
+                        <p>Legales Web</p>
+                    </div>
+                    <div class="contenedor4">
+                        <h2>Libro De Reclamaciones</h2>
+                        <a href="librodereclamaciones.html">
+                            <img src="img/libro.png">
+                        </a>
+                    </div>
+    
+                </div>
+                </footer>
+
+<div class="modal fade" id="modalCarac" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 shadow-lg border-0 animate__animated animate__fadeInDown">
+        
+        <div class="modal-header border-0 position-relative pb-0">
+          <h5 class="modal-title w-100 text-center fw-semibold" id="modalReservaLabel">¡Reserva Exitosa!</h5>
+          <button type="button" class="btn-close position-absolute end-0 top-0 me-2 mt-2" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+  
+        <div class="modal-body text-center">
+          <i class="bi bi-calendar-check-fill text-success fs-1 mb-3"></i>
+          <p class="fs-5 mb-0">Se ha reservado correctamente.</p>
+        </div>
+  
+        <div class="modal-footer justify-content-center border-0">
+          <button type="button" class="btn btn-success px-4 rounded-pill shadow-sm" data-bs-dismiss="modal">
+            <i class="bi bi-check-circle me-1"></i>Aceptar
+          </button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>

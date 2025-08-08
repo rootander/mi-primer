@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Luxurious+Roman&family=Sanchez:ital@0;1&display=swap');
+#modalCarac,
+#modalCarac .modal-body,
+#modalCarac .modal-footer,
+#modalCarac .btn {
+ 
+    font-family: "Fredoka", sans-serif;
+
+    font-weight:100%;
+    font-size: 22px;
+
+}
+    .password-container {
+      position: relative;
+    }
+
+    .password-container i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #666;
+    }
+
+    .password-container {
+    position: relative;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.password-container input[type="password"] {
+    width: 100%;
+    padding-right: 40px; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+}
+
+

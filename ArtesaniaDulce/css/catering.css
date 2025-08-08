@@ -1,0 +1,84 @@
+
+.catering {
+    position: relative;
+    max-width: 100%;
+    padding: 40px 0px;
+    background:#f9f9f9;
+    color: #333;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.catering h1 {
+    width: 16.5%;
+    position: relative;
+    left: 10px;
+    padding: 0px 0px;
+    font-size: 2.5rem;
+    color: #da8d19;
+    margin-bottom: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #da8d19;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.catering p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.catering .servicios {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+    margin-top: 30px;
+}
+
+.catering .servicio {
+    background-color: #fff;
+    border-radius: 10px;
+ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.catering .servicio:hover {
+    transform: translateY(-5px);
+}
+
+.catering .servicio img {
+    width: 100%;             
+    height: auto;          
+    border-radius: 10px;     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.catering .servicio .contenido {
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .catering h1 {
+        width: 50%;
+        position: relative;
+        font-size: 30px;
+        left: 0px;
+    }
+
+}
