@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asistencias</title>
+    <style>
+        :root {
+            --sidebar-width: 85px;
+            --sidebar-bg: #19414b;
+            --card-bg: #1a4d40;
+            --navbar-height: 60px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaf4f3;
+        }
+
+        .navbar {
+            height: var(--navbar-height);
+            background-color: var(--card-bg);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--sidebar-bg);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: var(--navbar-height);
+        }
+
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #19414b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--card-bg);
+            color: white;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .footer button {
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer button:hover {
+            background-color: #133b30;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: white;
+        }
+        .asistio { background-color: #2e7d32; }
+        .falto { background-color: #c62828; }
+        .tarde { background-color: #f9a825; color: #000; }
+
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Logo</div>
+        <div>
+            Hola, usuario<br>
+            rol
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <button>Inicio</button>
+        <button>Asistencia</button>
+        <button>Empleados</button>
+        <button>Reportes</button>
+        <button>Configuración</button>
+        <button>Salir</button>
+    </div>
+
+    <div class="main-content">
+        <h2>Gestión de Asistencias</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombres y Apellido</th>
+                    <th>ID</th>
+                    <th>Hora Entrada</th>
+                    <th>Hora Llegada</th>
+                    <th>Hora Salida</th>
+                    <th>Tipo de Asistencia</th>
+                    <th>DNI</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/05/2025</td>
+                    <td>Juan Pérez</td>
+                    <td>001</td>
+                    <td>08:00</td>
+                    <td>08:15</td>
+                    <td>16:00</td>
+                    <td><span class="tag tarde">LLEGÓ TARDE</span></td>
+                    <td>12345678</td>
+                    <td>Retraso por tráfico</td>
+                </tr>
+                <tr>
+                    <td>10/05/2025</td>
+                    <td>Laura Gómez</td>
+                    <td>002</td>
+                    <td>08:00</td>
+                    <td>07:55</td>
+                    <td>16:00</td>
+                    <td><span class="tag asistio">ASISTIÓ</span></td>
+                    <td>87654321</td>
+                    <td>Sin observaciones</td>
+                </tr>
+                <tr>
+                    <td>10/05/2025</td>
+                    <td>Pedro Ríos</td>
+                    <td>003</td>
+                    <td>08:00</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td><span class="tag falto">FALTÓ</span></td>
+                    <td>34567891</td>
+                    <td>No asistió</td>
+                </tr>
+            </tbody>
+        </table>
+
+      
+        <div class="footer">
+            <button>Cerrar sesión</button>
+            <div>
+                <a href=""></a>
+            <button>Solicitar Salida Anticipada</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

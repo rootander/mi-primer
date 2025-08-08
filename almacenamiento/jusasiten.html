@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Asistencias</title>
+    <style>
+        :root {
+            --sidebar-width: 85px;
+            --sidebar-bg: #19414b;
+            --card-bg: #1a4d40;
+            --navbar-height: 60px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaf4f3;
+        }
+
+        .navbar {
+            height: var(--navbar-height);
+            background-color: var(--card-bg);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--sidebar-bg);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: var(--navbar-height);
+        }
+
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #19414b;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--card-bg);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer button {
+            padding: 10px 20px;
+            background-color: var(--card-bg);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .footer button:hover {
+            background-color: #133b30;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: white;
+            cursor: help;
+        }
+        .asistio { background-color: #2e7d32; }
+        .falto { background-color: #c62828; }
+        .tarde { background-color: #f9a825; color: #000; }
+        .justificado { background-color: #1565c0; }
+
+        .form-section {
+    max-width: 500px;
+    margin: 30px auto; /* centra horizontalmente */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+    margin-bottom: 15px;
+    color: #19414b;
+    text-align: center;
+}
+
+.form-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-section input,
+.form-section textarea,
+.form-section select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-section button {
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--card-bg);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #133b30;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .form-section {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    .form-section input,
+    .form-section textarea,
+    .form-section button {
+        font-size: 1em;
+    }
+}
+
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            table, .search-bar, .form-section, .footer {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            th, td {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>Logo</div>
+        <div>
+            Hola, usuario<br>
+            rol
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <button>Inicio</button>
+        <button>Asistencia</button>
+        <button>Empleados</button>
+        <button>Reportes</button>
+        <button>Configuración</button>
+        <button>Salir</button>
+    </div>
+
+    <div class="main-content">
+        <h2>Gestión de Asistencias</h2>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar por nombre">
+            <input type="text" placeholder="Buscar por DNI">
+            <input type="date" placeholder="Buscar por fecha">
+        </div>
+
+        <table id="asistencias-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombres y Apellido</th>
+                    <th>ID</th>
+                    <th>Hora Entrada</th>
+                    <th>Hora Llegada</th>
+                    <th>Hora Salida</th>
+                    <th>Tipo de Asistencia</th>
+                    <th>DNI</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-id="001" data-tipo="tarde">
+                    <td>10/05/2025</td>
+                    <td>Juan Pérez</td>
+                    <td>001</td>
+                    <td>08:00</td>
+                    <td>08:15</td>
+                    <td>16:00</td>
+                    <td><span class="tag tarde" title="Empleado llegó después de la hora de entrada">LLEGÓ TARDE</span></td>
+                    <td>12345678</td>
+                    <td><input type="text" value="Retraso por tráfico"></td>
+                </tr>
+                <tr data-id="002" data-tipo="asistio">
+                    <td>10/05/2025</td>
+                    <td>Laura Gómez</td>
+                    <td>002</td>
+                    <td>08:00</td>
+                    <td>07:55</td>
+                    <td>16:00</td>
+                    <td><span class="tag asistio" title="Empleado asistió puntualmente">ASISTIÓ</span></td>
+                    <td>87654321</td>
+                    <td><input type="text" value="Sin observaciones"></td>
+                </tr>
+                <tr data-id="003" data-tipo="falto">
+                    <td>10/05/2025</td>
+                    <td>Pedro Ríos</td>
+                    <td>003</td>
+                    <td>08:00</td>
+                    <td>---</td>
+                    <td>16:00</td>
+                    <td><span class="tag falto" title="Empleado no se presentó">FALTÓ</span></td>
+                    <td>34567891</td>
+                    <td><input type="text" value="No asistió"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="form-section">
+            <h3>Justificar y Registrar Descuento</h3>
+            <form id="descuento-form">
+                <label for="id_empleado">ID del Empleado:</label>
+                <input type="text" id="id_empleado" name="id_empleado" required>
+                
+                <label for="tipo_asistencia">Tipo de Asistencia:</label>
+                <select id="tipo_asistencia" name="tipo_asistencia" required>
+                    <option value="">Seleccione...</option>
+                    <option value="falto">Falta</option>
+                    <option value="tarde">Tardanza</option>
+                </select>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="justificado" name="justificado">
+                    <label for="justificado">Justificado</label>
+                </div>
+
+                <label for="justificacion">Justificación:</label>
+                <textarea id="justificacion" name="justificacion"></textarea>
+
+                <label for="descuento">Descuento Aplicado (S/.):</label>
+                <input type="number" id="descuento" name="descuento" step="0.01" min="0" readonly required>
+
+                <label for="fecha_registro">Fecha:</label>
+                <input type="date" id="fecha_registro" name="fecha_registro" required>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <button>Cerrar sesión</button>
+            <button>Solicitar Salida Anticipada</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar fecha actual por defecto
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('fecha_registro').value = today;
+            
+            // Variables para almacenar el sueldo base (podría venir de una base de datos)
+            const sueldoBase = 1500; // Ejemplo: S/. 1500
+            
+            // Seleccionar elementos del formulario
+            const idEmpleadoInput = document.getElementById('id_empleado');
+            const tipoAsistenciaSelect = document.getElementById('tipo_asistencia');
+            const justificadoCheckbox = document.getElementById('justificado');
+            const descuentoInput = document.getElementById('descuento');
+            const form = document.getElementById('descuento-form');
+            
+            // Manejar clic en filas de la tabla
+            const filasTabla = document.querySelectorAll('#asistencias-table tbody tr');
+            filasTabla.forEach(fila => {
+                fila.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const tipo = this.getAttribute('data-tipo');
+                    
+                    // Llenar automáticamente el formulario
+                    idEmpleadoInput.value = id;
+                    tipoAsistenciaSelect.value = tipo;
+                    
+                    // Calcular descuento inicial
+                    calcularDescuento();
+                });
+            });
+            
+            // Calcular descuento cuando cambian los campos relevantes
+            tipoAsistenciaSelect.addEventListener('change', calcularDescuento);
+            justificadoCheckbox.addEventListener('change', calcularDescuento);
+            
+            function calcularDescuento() {
+                const tipo = tipoAsistenciaSelect.value;
+                const justificado = justificadoCheckbox.checked;
+                let porcentaje = 0;
+                
+                // Calcular porcentaje según las reglas
+                if (tipo === 'falto') {
+                    porcentaje = justificado ? 30 : 50;
+                } else if (tipo === 'tarde') {
+                    porcentaje = justificado ? 10 : 25;
+                }
+                
+                // Calcular monto del descuento
+                const descuento = (sueldoBase * porcentaje) / 100;
+                descuentoInput.value = descuento.toFixed(2);
+                
+                // Habilitar/deshabilitar campo de justificación
+                document.getElementById('justificacion').disabled = !justificado;
+            }
+            
+            // Manejar envío del formulario
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const id = idEmpleadoInput.value;
+                const tipo = tipoAsistenciaSelect.value;
+                const justificado = justificadoCheckbox.checked;
+                const descuento = descuentoInput.value;
+                const justificacion = document.getElementById('justificacion').value;
+                const fecha = document.getElementById('fecha_registro').value;
+                
+                // Aquí normalmente enviarías los datos al servidor
+                console.log('Datos a enviar:', {
+                    id_empleado: id,
+                    tipo_asistencia: tipo,
+                    justificado: justificado,
+                    descuento: descuento,
+                    justificacion: justificacion,
+                    fecha: fecha
+                });
+                
+                // Actualizar la fila correspondiente en la tabla
+                const fila = document.querySelector(`#asistencias-table tbody tr[data-id="${id}"]`);
+                if (fila) {
+                    const celdaTipo = fila.querySelector('td:nth-child(7)');
+                    
+                    if (justificado) {
+                        if (tipo === 'falto') {
+                            celdaTipo.innerHTML = '<span class="tag justificado" title="Falta justificada">FALTA JUSTIFICADA</span>';
+                        } else if (tipo === 'tarde') {
+                            celdaTipo.innerHTML = '<span class="tag justificado" title="Tardanza justificada">TARDANZA JUSTIFICADA</span>';
+                        }
+                    }
+                    
+                    // Actualizar observaciones
+                    const observaciones = fila.querySelector('td:nth-child(9) input');
+                    observaciones.value = justificacion || observaciones.value;
+                }
+                
+                alert('Registro guardado exitosamente');
+                form.reset();
+                document.getElementById('fecha_registro').value = today;
+            });
+        });
+    </script>
+</body>
+</html>
